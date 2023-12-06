@@ -1,8 +1,8 @@
 Algoritmo logicaDeProgramacionI
 	
-Definir num1, num2, num3 Como Entero
+	Definir num1, num2, num3 Como Entero
 	
-Escribir "Ingrese primero numero"
+	Escribir "Ingrese primero numero"
 	leer num1
 	
 	Escribir "Ingrese segundo numero"
@@ -11,40 +11,60 @@ Escribir "Ingrese primero numero"
 	Escribir "Ingrese tercer numero"
 	Leer num3
 	
-	Si num1>num2 y num1>num3 Entonces
-		Escribir " El numero mayor es: " num1
-		Si num2>num3 Entonces
-			Escribir "el numero del centro es: " num2
-			Escribir "el numero menor es: " num3
-		SiNo
-			Escribir "el numero del centro es: " num3
-			Escribir "el numero menor es: " num2
-		Fin Si
-	Fin Si
-	
-	Si num2>num1 y num2>num3 Entonces 
-		Escribir "El numero mayor es: " num2
-        Si num1>num3 Entonces
-			Escribir "el numero del centro es: " num1
-			Escribir "el numero menor es: " num3
-		SiNo
-			Escribir "el numero del centro es: " num3
-			Escribir "el numero menor es: " num1	
-		FinSi
-		
-	Fin Si
-	
-	Si num3>num1 y num3>num2 Entonces
-		Escribir "El numero mayor es: " num3
-	    Si num1>num2 Entonces
-			Escribir "el numero del centro es: " num1
-			Escribir "el numero menor es: " num2
-		SiNo
-			Escribir "el numero del centro es: " num2
-			Escribir "el numero menor es: " num1
-	Fin Si
-	
-	
-	
+	Si num1=num2 Entonces
+		Escribir num1 "       es igual a:       " num2
 	FinSi
+	Si num2=num3 Entonces
+		Escribir num2 "      es igual a:       " num3
+	FinSi
+	Si num3=num1 Entonces
+		Escribir num3 "      es igual a:       " num1 
+	FinSi
+	Si num1=num2 y num2=num3 Entonces
+		Escribir "Todos los numeros son iguales"
+	SiNo
+		
+	
+	
+		Si num1>=num2 y num1>=num3 Entonces
+			mmayor<-num1
+			
+			si num2>=num3 Entonces
+				mcentro<-num2
+				mmenor<-num3
+			SiNo
+				mmenor<-num2
+				mcentro<-num3
+			FinSi
+		SiNo
+			Si num2>=num1 y num2>=num3 Entonces
+				mmayor<-num2
+				si num1>=num3 Entonces
+					mcentro<-num1
+					mmenor<-num3
+				SiNo
+					mmenor<-num1
+					mcentro<-num3
+					
+				FinSi
+			SiNo
+				mmayor<-num3
+				Si num1>=num2 Entonces
+					mcentro<-num1
+					mmenor<-num2
+				SiNo
+					mmenor<-num1
+					mcentro<-num2
+				FinSi
+			FinSi
+			
+			
+		FinSi
+		Escribir "El numero mayor es:  " mmayor
+		Escribir "El numero centro es: " mcentro
+		Escribir " El numero menor es:      " mmenor		
+    
+	FinSi
+	
+
 FinAlgoritmo
